@@ -64,15 +64,38 @@ robot -d cadastro.robot -i conta  suites
 Criar Movimentacão do Tipo Rceita e Pago, Criar Movimentacão do Tipo Despesa e Pendente
 
 ```sh
-robot -d cadastro.robot -i conta  suites
+robot -d results suites/movimentacao.robot
 ```
 
+<br/>
 
+### **Executando testes de resumo_mensal.robot**
+Excluir Movimentação
 
+```sh
+robot -d results -t "TC01: Excluir Movimentação" suites
+```
 
+<br/>
 
+### **Executando Todos os Casos de Teste**
+Excluir Movimentação
 
+```sh
+robot -d results suites
+```
+---
+<br/>
 
+⚠️Pode acontecer de alguns testes falharem por conta da FakeLibrary onde gera nomes com alguns acentos que não é permitido para a criação de email ja que uso o nome gerado para a contrução do Email
+
+### *ex:*
+```python
+   variavel nome recebe => ${NOME} = Otávio Nunes
+   
+   Criação do Email => ${NOME}@teste.com
+```
+Acontece um erro pois a biblioteca gera um nome com acento que não é permitido pelo campo Email.
 
 [//]: # 
    [vs code]: <https://code.visualstudio.com/>
