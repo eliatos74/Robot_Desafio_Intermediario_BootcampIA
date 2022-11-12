@@ -7,6 +7,7 @@ Test Teardown    E Fecha Navegador
 
 *** Test Cases ***
 TC01: Criar Conta
+    [Tags]  conta
     Dado Que Eu Clique Em Adicionar Conta
     E Digito o Nome da Conta Conta 1
     E Clico Em Salvar
@@ -17,6 +18,7 @@ TC02: Listar Contas
     Então Devo Ver Uma Lista De Contas
 
 TC03: Editar Conta
+    [Tags]  conta
     Dado Que Eu Esteja Na Pagina De contas
     E Clico Em Editar a Conta Com o Nome Conta 1
     E Escrevo o Novo Nome Da Conta Conta 1 Editada
@@ -24,6 +26,7 @@ TC03: Editar Conta
     Então Devo Ver a Mensagem Conta alterada com sucesso!
 
 TC04: Excluir Conta
+    [Tags]  conta
     Dado Que Eu Esteja Na Pagina De contas
     E Clico Em Excluir Uma Conta Com o Nome Conta 1 Editada
     Então Devo Ver a Mensagem Conta removida com sucesso!

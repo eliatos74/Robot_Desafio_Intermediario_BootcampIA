@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.7 on win32)" generated="20221112 17:31:16.611" rpa="false" schemaversion="3">
+<suite id="s1" name="Suites" source="C:\Users\Elias\Documents\BootCamp-Instituto Atlantico\Robot_Desafio_Intermediario_BootcampIA\suites">
+<suite id="s1-s1" name="Contas" source="C:\Users\Elias\Documents\BootCamp-Instituto Atlantico\Robot_Desafio_Intermediario_BootcampIA\suites\contas.robot">
+<test id="s1-s1-t1" name="TC01: Criar Conta" line="9">
+<kw name="Dado Que Eu Esteja Logado" library="global" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${GERAL.URL_PRINCIPAL}</arg>
+<arg>${GERAL.NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221112 17:31:17.080" level="INFO">Opening browser 'Chrome' to base url 'https://seubarriga.wcaquino.me'.</msg>
+<status status="PASS" starttime="20221112 17:31:17.079" endtime="20221112 17:31:19.570"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${GERAL.URL_PRINCIPAL}/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221112 17:31:19.571" level="INFO">Opening url 'https://seubarriga.wcaquino.me/login'</msg>
+<status status="PASS" starttime="20221112 17:31:19.570" endtime="20221112 17:31:19.686"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN.INPUT_EMAIL}</arg>
+<arg>${DADOS_USUARIO.EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:19.687" level="INFO">Typing text 'eli4tos74@teste.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20221112 17:31:19.686" endtime="20221112 17:31:19.737"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN.INPUT_SENHA}</arg>
+<arg>${DADOS_USUARIO.SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:19.738" level="INFO">Typing text '12345' into text field 'id=senha'.</msg>
+<status status="PASS" starttime="20221112 17:31:19.737" endtime="20221112 17:31:19.778"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN.BUTTON_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:19.779" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20221112 17:31:19.779" endtime="20221112 17:31:20.406"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:17.078" endtime="20221112 17:31:20.406"/>
+</kw>
+<kw name="Dado Que Eu Clique Em Adicionar Conta" library="contas_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONTA.A_TELA_CONTA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:20.408" level="INFO">Clicking element '//*[contains(text(), "Contas ")]'.</msg>
+<status status="PASS" starttime="20221112 17:31:20.407" endtime="20221112 17:31:20.434"/>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>${CONTA.A_TELA_CONTA}</arg>
+<arg>ARROW_DOWN</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20221112 17:31:20.434" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20221112 17:31:20.434" endtime="20221112 17:31:20.461"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONTA.A_TELA_ADDCONTA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:20.462" level="INFO">Clicking element '//a[@href="/addConta"]'.</msg>
+<status status="PASS" starttime="20221112 17:31:20.461" endtime="20221112 17:31:20.606"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:20.407" endtime="20221112 17:31:20.606"/>
+</kw>
+<kw name="E Digito o Nome da Conta Conta 1" library="contas_page" sourcename="E Digito o Nome da Conta ${conta_informada}">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CONTA.INPUT_NOME}</arg>
+<arg>${conta_informada}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:20.607" level="INFO">Typing text 'Conta 1' into text field 'id:nome'.</msg>
+<status status="PASS" starttime="20221112 17:31:20.607" endtime="20221112 17:31:20.652"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:20.607" endtime="20221112 17:31:20.652"/>
+</kw>
+<kw name="E Clico Em Salvar" library="contas_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONTA.BUTTON_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:20.653" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20221112 17:31:20.653" endtime="20221112 17:31:20.971"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:20.653" endtime="20221112 17:31:20.971"/>
+</kw>
+<kw name="Então Devo Ver a Mensagem Conta adicionada com sucesso!" library="global" sourcename="Então Devo Ver a Mensagem ${MENSAGEM}">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${MENSAGEM}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221112 17:31:20.980" level="INFO">Current page contains text 'Conta adicionada com sucesso!'.</msg>
+<status status="PASS" starttime="20221112 17:31:20.972" endtime="20221112 17:31:20.980"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:20.972" endtime="20221112 17:31:20.980"/>
+</kw>
+<kw name="E Fecha Navegador" library="global" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221112 17:31:20.980" endtime="20221112 17:31:23.072"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:20.980" endtime="20221112 17:31:23.072"/>
+</kw>
+<tag>conta</tag>
+<status status="PASS" starttime="20221112 17:31:17.078" endtime="20221112 17:31:23.072"/>
+</test>
+<test id="s1-s1-t2" name="TC03: Editar Conta" line="20">
+<kw name="Dado Que Eu Esteja Logado" library="global" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${GERAL.URL_PRINCIPAL}</arg>
+<arg>${GERAL.NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221112 17:31:23.075" level="INFO">Opening browser 'Chrome' to base url 'https://seubarriga.wcaquino.me'.</msg>
+<status status="PASS" starttime="20221112 17:31:23.074" endtime="20221112 17:31:24.942"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${GERAL.URL_PRINCIPAL}/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221112 17:31:24.943" level="INFO">Opening url 'https://seubarriga.wcaquino.me/login'</msg>
+<status status="PASS" starttime="20221112 17:31:24.942" endtime="20221112 17:31:25.080"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN.INPUT_EMAIL}</arg>
+<arg>${DADOS_USUARIO.EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:25.081" level="INFO">Typing text 'eli4tos74@teste.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20221112 17:31:25.080" endtime="20221112 17:31:25.131"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN.INPUT_SENHA}</arg>
+<arg>${DADOS_USUARIO.SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:25.132" level="INFO">Typing text '12345' into text field 'id=senha'.</msg>
+<status status="PASS" starttime="20221112 17:31:25.131" endtime="20221112 17:31:25.174"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN.BUTTON_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:25.174" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20221112 17:31:25.174" endtime="20221112 17:31:25.633"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:23.074" endtime="20221112 17:31:25.633"/>
+</kw>
+<kw name="Dado Que Eu Esteja Na Pagina De contas" library="contas_page">
+<kw name="Dado Que Eu Clique Em Listar Contas" library="contas_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONTA.A_TELA_CONTA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:25.635" level="INFO">Clicking element '//*[contains(text(), "Contas ")]'.</msg>
+<status status="PASS" starttime="20221112 17:31:25.634" endtime="20221112 17:31:25.660"/>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>${CONTA.A_TELA_CONTA}</arg>
+<arg>ARROW_DOWN</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20221112 17:31:25.660" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20221112 17:31:25.660" endtime="20221112 17:31:25.688"/>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>${CONTA.A_TELA_CONTA}</arg>
+<arg>ARROW_DOWN</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20221112 17:31:25.688" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20221112 17:31:25.688" endtime="20221112 17:31:25.710"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONTA.A_TELA_LISTARCONTA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:25.710" level="INFO">Clicking element '//a[.='Listar']'.</msg>
+<status status="PASS" starttime="20221112 17:31:25.710" endtime="20221112 17:31:25.964"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:25.634" endtime="20221112 17:31:25.965"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:25.634" endtime="20221112 17:31:25.965"/>
+</kw>
+<kw name="E Clico Em Editar a Conta Com o Nome Conta 1" library="contas_page" sourcename="E Clico Em Editar a Conta Com o Nome ${conta_informada}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()='${conta_informada}']//..//a[contains(@href, "editarConta")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:25.966" level="INFO">Clicking element '//td[text()='Conta 1']//..//a[contains(@href, "editarConta")]'.</msg>
+<status status="PASS" starttime="20221112 17:31:25.965" endtime="20221112 17:31:26.171"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:25.965" endtime="20221112 17:31:26.171"/>
+</kw>
+<kw name="E Escrevo o Novo Nome Da Conta Conta 1 Editada" library="contas_page" sourcename="E Escrevo o Novo Nome Da Conta ${conta_informada}">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${CONTA.INPUT_NOME}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20221112 17:31:26.172" endtime="20221112 17:31:26.199"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${CONTA.INPUT_NOME}</arg>
+<arg>${conta_informada}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:26.200" level="INFO">Typing text 'Conta 1 Editada' into text field 'id:nome'.</msg>
+<status status="PASS" starttime="20221112 17:31:26.199" endtime="20221112 17:31:26.233"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:26.172" endtime="20221112 17:31:26.233"/>
+</kw>
+<kw name="E Clico Em Salvar" library="contas_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONTA.BUTTON_SALVAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:26.235" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20221112 17:31:26.234" endtime="20221112 17:31:26.443"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:26.234" endtime="20221112 17:31:26.443"/>
+</kw>
+<kw name="Então Devo Ver a Mensagem Conta alterada com sucesso!" library="global" sourcename="Então Devo Ver a Mensagem ${MENSAGEM}">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${MENSAGEM}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221112 17:31:26.453" level="INFO">Current page contains text 'Conta alterada com sucesso!'.</msg>
+<status status="PASS" starttime="20221112 17:31:26.444" endtime="20221112 17:31:26.453"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:26.444" endtime="20221112 17:31:26.453"/>
+</kw>
+<kw name="E Fecha Navegador" library="global" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221112 17:31:26.453" endtime="20221112 17:31:28.538"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:26.453" endtime="20221112 17:31:28.538"/>
+</kw>
+<tag>conta</tag>
+<status status="PASS" starttime="20221112 17:31:23.073" endtime="20221112 17:31:28.538"/>
+</test>
+<test id="s1-s1-t3" name="TC04: Excluir Conta" line="28">
+<kw name="Dado Que Eu Esteja Logado" library="global" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${GERAL.URL_PRINCIPAL}</arg>
+<arg>${GERAL.NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221112 17:31:28.540" level="INFO">Opening browser 'Chrome' to base url 'https://seubarriga.wcaquino.me'.</msg>
+<status status="PASS" starttime="20221112 17:31:28.540" endtime="20221112 17:31:30.972"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${GERAL.URL_PRINCIPAL}/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221112 17:31:30.972" level="INFO">Opening url 'https://seubarriga.wcaquino.me/login'</msg>
+<status status="PASS" starttime="20221112 17:31:30.972" endtime="20221112 17:31:31.089"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN.INPUT_EMAIL}</arg>
+<arg>${DADOS_USUARIO.EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:31.090" level="INFO">Typing text 'eli4tos74@teste.com' into text field 'id=email'.</msg>
+<status status="PASS" starttime="20221112 17:31:31.089" endtime="20221112 17:31:31.140"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${LOGIN.INPUT_SENHA}</arg>
+<arg>${DADOS_USUARIO.SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:31.141" level="INFO">Typing text '12345' into text field 'id=senha'.</msg>
+<status status="PASS" starttime="20221112 17:31:31.140" endtime="20221112 17:31:31.184"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LOGIN.BUTTON_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:31.185" level="INFO">Clicking element '//button[@type="submit"]'.</msg>
+<status status="PASS" starttime="20221112 17:31:31.185" endtime="20221112 17:31:31.665"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:28.540" endtime="20221112 17:31:31.665"/>
+</kw>
+<kw name="Dado Que Eu Esteja Na Pagina De contas" library="contas_page">
+<kw name="Dado Que Eu Clique Em Listar Contas" library="contas_page">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONTA.A_TELA_CONTA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:31.667" level="INFO">Clicking element '//*[contains(text(), "Contas ")]'.</msg>
+<status status="PASS" starttime="20221112 17:31:31.666" endtime="20221112 17:31:31.692"/>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>${CONTA.A_TELA_CONTA}</arg>
+<arg>ARROW_DOWN</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20221112 17:31:31.692" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20221112 17:31:31.692" endtime="20221112 17:31:31.720"/>
+</kw>
+<kw name="Press Key" library="SeleniumLibrary">
+<arg>${CONTA.A_TELA_CONTA}</arg>
+<arg>ARROW_DOWN</arg>
+<doc>*DEPRECATED in SeleniumLibrary 4.0.* use `Press Keys` instead.</doc>
+<msg timestamp="20221112 17:31:31.720" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<status status="PASS" starttime="20221112 17:31:31.720" endtime="20221112 17:31:31.740"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CONTA.A_TELA_LISTARCONTA}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:31.741" level="INFO">Clicking element '//a[.='Listar']'.</msg>
+<status status="PASS" starttime="20221112 17:31:31.740" endtime="20221112 17:31:31.940"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:31.666" endtime="20221112 17:31:31.940"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:31.666" endtime="20221112 17:31:31.940"/>
+</kw>
+<kw name="E Clico Em Excluir Uma Conta Com o Nome Conta 1 Editada" library="contas_page" sourcename="E Clico Em Excluir Uma Conta Com o Nome ${conta_informada}">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//td[text()="${conta_informada}"]//..//a[contains(@href, "removerConta")]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221112 17:31:31.941" level="INFO">Clicking element '//td[text()="Conta 1 Editada"]//..//a[contains(@href, "removerConta")]'.</msg>
+<status status="PASS" starttime="20221112 17:31:31.941" endtime="20221112 17:31:32.116"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:31.941" endtime="20221112 17:31:32.116"/>
+</kw>
+<kw name="Então Devo Ver a Mensagem Conta removida com sucesso!" library="global" sourcename="Então Devo Ver a Mensagem ${MENSAGEM}">
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>${MENSAGEM}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20221112 17:31:32.125" level="INFO">Current page contains text 'Conta removida com sucesso!'.</msg>
+<status status="PASS" starttime="20221112 17:31:32.117" endtime="20221112 17:31:32.125"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:32.116" endtime="20221112 17:31:32.125"/>
+</kw>
+<kw name="E Fecha Navegador" library="global" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221112 17:31:32.126" endtime="20221112 17:31:34.205"/>
+</kw>
+<status status="PASS" starttime="20221112 17:31:32.126" endtime="20221112 17:31:34.205"/>
+</kw>
+<tag>conta</tag>
+<status status="PASS" starttime="20221112 17:31:28.539" endtime="20221112 17:31:34.205"/>
+</test>
+<status status="PASS" starttime="20221112 17:31:16.627" endtime="20221112 17:31:34.207"/>
+</suite>
+<status status="PASS" starttime="20221112 17:31:16.612" endtime="20221112 17:31:34.208"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="3" fail="0" skip="0">conta</stat>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1" name="Contas">Suites.Contas</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221112 17:31:20.434" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<msg timestamp="20221112 17:31:25.660" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<msg timestamp="20221112 17:31:25.688" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<msg timestamp="20221112 17:31:31.692" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+<msg timestamp="20221112 17:31:31.720" level="WARN">Keyword 'SeleniumLibrary.Press Key' is deprecated. use `Press Keys` instead.</msg>
+</errors>
+</robot>
