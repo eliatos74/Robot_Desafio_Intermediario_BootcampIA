@@ -17,6 +17,7 @@ Library    Collections
 *** Keywords ***
 
 # LISTAR RESUMOS
+# BAIXO impacto de ocorrer bugs, passando o mes e ano referente ao de criação aparece atraves do filtro corretamente
 Dado Que Eu Esteja Na Pagina de Resumo Mensal
     Go To    ${GERAL.URL_PRINCIPAL}/extrato
 E Seleciono o Mes ${MES}
@@ -32,6 +33,7 @@ Então Deve Ver As Movimentações Do Mes Pesquisado
     
 
 # EXCLUIR RESUMOS
+# MEDIO impacto de ocorrer bugs, caso não passe o mês e ano corretamente aparecerá um erro que não é possivel clicar no elemento da keyword : "Quando Clico em Excluir"
 E informo o Mês ${MES}
     E Seleciono o Mes ${MES}   
 E informo o Ano de ${ANO}

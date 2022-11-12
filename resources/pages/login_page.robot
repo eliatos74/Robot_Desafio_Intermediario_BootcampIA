@@ -12,6 +12,8 @@ Resource    ../main.robot
 ...    DIV_MENSAGEM_EMAIL_OBRIGATORIA=//*[contains(text(), 'Email é um campo obrigatório')]
 
 *** Keywords ***
+
+# BAIXO impacto de ocorrer bugs
 Dado Que Eu Esteja Na Pagina de Login
     Click Element          ${LOGIN.A_TELA_LOGIN} 
 E Preencho o Email

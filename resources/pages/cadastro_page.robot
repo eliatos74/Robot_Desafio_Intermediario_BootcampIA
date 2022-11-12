@@ -15,6 +15,9 @@ Library         FakerLibrary    locale=pt_BR
 
 *** Keywords ***
 
+# MEDIO impacto de ocorrer bugs, pois algumas vezes são gerados através da FakeLibrary
+# nomes com alguns caracteres especiais.
+
 #CADASTRO NO USUARIO
 Dado Que eu Estejha na Pagina de Cadastro
     Click Element            ${CADASTRO.A_TELA_CADASTRO} 
@@ -30,6 +33,8 @@ E Preencho o Campo Senha
 Quando Clico em Cadastrar
     Click Element             ${CADASTRO.INPUT_BTN_CADASTRAR}
 
+
+# BAIXO impacto de ocorrer bugs
 
 #USUARIO JA CADASTRADO
 E Preencho o Campo Nome, Email e Senha de Um Usuário ja Cadastrado

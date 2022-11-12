@@ -2,7 +2,7 @@
 Resource    ../resources/main.robot
 
 Test Setup       Dado que eu esteja na pagina Inicial
-# Test Teardown    E Fecha Navegador
+Test Teardown    E Fecha Navegador
 
 *** Test Cases ***
 TC01: Logar com Usuário Valido Padrão

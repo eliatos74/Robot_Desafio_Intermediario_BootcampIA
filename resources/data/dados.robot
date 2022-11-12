@@ -2,6 +2,9 @@
 Resource    ../main.robot
 
 *** Variables ***
+
+# Dados para massa de teste 
+
 &{DADOS_USUARIO}
 ...    NOME=elias
 ...    EMAIL=eli4tos74@teste.com

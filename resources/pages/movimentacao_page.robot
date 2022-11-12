@@ -14,6 +14,7 @@ Library    String
 ...    BOTAO_SALVAR=//button[@class='btn btn-primary']
 
 
+# MEDIO impacto de ocorrer bugs, dado que o usuario digite todos os dados e de forma correta, não ha risco de ocorrer bugs.
 *** Keywords ***
 Dado Que Eu Esteja Na Pagina de Criar Movimentação
     Go To                        ${GERAL.URL_PRINCIPAL}/movimentacao
